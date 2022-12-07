@@ -1,7 +1,6 @@
 <script setup >
 import Login from './components/Login.vue';
 import Register from './components/Register.vue';
-import SavedNotification from './components/SavedNotification.vue';
 import { useModalStore } from './store/post'
 const store = useModalStore();
 
@@ -14,10 +13,8 @@ const store = useModalStore();
  </div>
 
 <div   v-for="modal in store.modals" class="flex w-screen  justify-center pt-12">
-
   <Login v-if="modal.component === 'Login'" />
-  <Register v-if="modal.component === 'Register'" />
-  
+  <Register v-if="modal.component === 'Register'" />  
  </div>
  
 </template>
